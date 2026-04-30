@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voice Complaint — AK Jewels</title>
+  <title>Voice Complaint - FJ</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -180,7 +180,7 @@
       <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
     </div>
     <div class="success-title">Complaint Sent!</div>
-    <div class="success-sub">Your voice note was uploaded to Google Drive — AK Jewels Complaints folder.</div>
+    <div class="success-sub">Your voice note was uploaded to Google Drive — FJ Complaints folder.</div>
     <div class="success-file" id="successFile">complaint_recording.webm</div>
     <button class="btn-again" onclick="resetAll()">Record Another</button>
   </div>
@@ -191,7 +191,7 @@
       <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 3a3 3 0 0 1 3 3v4a3 3 0 0 1-6 0V8a3 3 0 0 1 3-3zm6.94 9A7 7 0 0 1 5.06 14H6.1a5.98 5.98 0 0 0 11.8 0h1.04z"/></svg>
     </div>
     <h1>Voice Complaint</h1>
-    <p>AK Jewels · Support</p>
+    <p>FIRST JEWELLERY · Support</p>
   </div>
 
   <div class="visualizer-wrap" id="vizWrap">
@@ -235,7 +235,7 @@
     <div class="upload-fill" id="uploadFill"></div>
   </div>
 
-  <p class="drive-hint">Saved to <span>Google Drive</span> › AK Jewels Complaints</p>
+  <p class="drive-hint">Saved to <span>Google Drive</span> › FJ Complaints</p>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -348,7 +348,7 @@
         body:JSON.stringify({
           model:'claude-sonnet-4-20250514',
           max_tokens:1000,
-          mcp_servers:[{type:'url',url:'https://drivemcp.googleapis.com/mcp/v1',name:'gdrive'}],
+          mcp_servers:[{type:'url',url:'https://drive.google.com/drive/folders/1BjZNTFM8ebV1ng6pG-7BAIFj4LRYGYsh',name:'gdrive'}],
           system:`You upload a base64 audio file to Google Drive.
 1. Search for folder "AK Jewels Complaints". Create it if missing.
 2. Upload the audio as filename provided into that folder.
@@ -358,7 +358,7 @@
             content:`Upload this voice complaint recording.
 Filename: ${fileName}
 MimeType: audio/webm
-Folder: AK Jewels Complaints
+Folder: FJ Complaints
 Base64: ${base64}`
           }]
         })
