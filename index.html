@@ -350,7 +350,7 @@
           max_tokens:1000,
           mcp_servers:[{type:'url',url:'https://drive.google.com/drive/folders/1BjZNTFM8ebV1ng6pG-7BAIFj4LRYGYsh',name:'gdrive'}],
           system:`You upload a base64 audio file to Google Drive.
-1. Search for folder "AK Jewels Complaints". Create it if missing.
+1. Search for folder "FJ COMPLAINTS". Create it if missing.
 2. Upload the audio as filename provided into that folder.
 3. Respond ONLY with JSON: {"success":true,"fileId":"...","fileName":"..."} or {"success":false,"error":"..."}. No other text.`,
           messages:[{
@@ -358,7 +358,7 @@
             content:`Upload this voice complaint recording.
 Filename: ${fileName}
 MimeType: audio/webm
-Folder: FJ Complaints
+Folder: FJ COMPLAINTS
 Base64: ${base64}`
           }]
         })
